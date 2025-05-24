@@ -1,0 +1,41 @@
+A semicircle is inscribed in another semicircle if the smaller semicircle's diameter is a chord of the larger semicircle, and the smaller semicircle's arc is tangent to the diameter of the larger semicircle.
+Semicircle $S_{1}$ is inscribed in a semicircle $S_{2}$, which is inscribed in another semicircle $S_{3}$. The radii of $S_{1}$ and $S_{3}$ are $1$ and 10, respectively, and the diameters of $S_{1}$ and $S_{3}$ are parallel. The endpoints of the diameter of $S_{3}$ are $A$ and $B$, and $S_{2}$ 's arc is tangent to $A B$ at $C$. Compute $A C \cdot C B$.
+
+\begin{tikzpicture}
+
+    % S_1
+    \coordinate (S_1_1) at (6.57,0.45);
+    \coordinate (S_1_2) at (9.65,0.45);
+    \draw (S_1_1) -- (S_1_2);
+
+    \draw (S_1_1) arc[start angle=180, end angle=0, radius=1.54]
+    node[midway,above] {};
+
+    \node[above=0.5cm] at (7,1.2) {$S_1$};
+
+    % S_2 
+    \coordinate (S_2_1) at (6.32,4.82);
+    \coordinate (S_2_2) at (9.95,0.68);
+
+    \draw (S_2_1) -- (S_2_2);
+
+    \draw (S_2_1) arc[start angle=131, end angle=311, radius=2.75]
+    node[midway,above] {};
+
+    \node[above=0.5cm] at (5,2) {$S_2$};
+
+    % S_3
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (10,0);
+    \draw (A) -- (B);
+    \fill (A) circle (2pt) node[below] {$A$};
+    \fill (B) circle (2pt) node[below] {$B$};
+
+    \draw (A) arc[start angle=180, end angle=0, radius=5]
+    node[midway,above] {};
+    \node[above=0.5cm] at (1,3) {$S_3$};
+
+    \coordinate (C) at (8.3,0);
+    \fill (C) circle (2pt) node[below] {$C$};
+
+\end{tikzpicture}

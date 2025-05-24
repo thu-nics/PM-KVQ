@@ -1,0 +1,20 @@
+{
+    "points": 7,
+    "details": [
+        {                                                                                                                        
+            "title": "Reduction to powers of prime divisors of n+1",
+            "points": 1,
+            "desc": "Uses Chinese Remainder Theorem to reduce the problem to a system of equations modulo $p_l^{e_l}$."
+        },
+        {
+            "title": "Remainder of $\\frac{n-j}{j} when p_l does not divide j",
+            "points": 3,
+            "desc": "Represents the term $n \\choose i$ as a product of fractions $\\frac{n-j}{j}$ and finds the remainder of the terms $\\frac{n-l}{l}^k$ where $p_l$ does not divide $j$."
+        },
+        {   
+            "title": "Remainder of $\\frac{n-j}{j} when $p_l$ divides $j$",
+            "points": 3,
+            "desc": "Represents the term $n \\choose i$ as a product of fractions $\\frac{n-j}{j}$ and finds the remainder of the terms $\\frac{n-l}{l}^k$ where $p_l$ divides $j$."
+        }
+    ]
+}

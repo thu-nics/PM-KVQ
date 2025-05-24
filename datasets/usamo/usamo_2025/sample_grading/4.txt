@@ -1,0 +1,20 @@
+{
+    "points": 7,
+    "details": [
+        {
+            "title": "Additional construction",
+            "points": 1,
+            "desc": "Constructs the point $M$, which turns out to be the circumcenter of $\triangle AFP$."
+        },
+        {
+            "title": "Properties of the construction",
+            "points": 4,
+            "desc": "Proves that $M$ is the circumcenter of $\triangle AFP$."
+        },
+        {
+            "title": "Finishing",
+            "points": 2,
+            "desc": "Shows that $CX=CY$ by utilising the aforementioned properties"
+        }
+    ]
+}

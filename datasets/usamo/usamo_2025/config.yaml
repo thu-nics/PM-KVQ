@@ -1,0 +1,7 @@
+instruction: "Give a thorough answer to the following question. Your answer will be graded by human judges based on accuracy, correctness, and your ability to prove the result. You should include all steps of the proof. Do not skip important steps, as this will reduce your grade. It does not suffice to merely state the result. Use LaTeX to format your answer."
+default_temperature: 0.6
+default_max_tokens: 16000
+strict_parsing: false
+n_problems: 6
+date: "2025-03-20"
+final_answer: false

@@ -1,0 +1,40 @@
+On $\triangle ABC$ points $A, D, E$, and $B$ lie in that order on side $\overline{AB}$ with $AD = 4$, $DE = 16$, $EB = 8$. Points $A, F, G$ and $C$ lie in that order on side $\overline{AC}$ with $AF = 13$, $FG = 52$, and $GC = 26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area $288$. Find the area of heptagon $AFNBCEM$.
+
+\begin{tikzpicture}[scale=0.07, line join=round, line cap=round, >=stealth]
+
+    \coordinate (A) at (100,100);
+
+    \coordinate (D) at (95,80);
+    \coordinate (F) at (130,80);
+    \coordinate (M) at (165,80);
+
+    \coordinate (N) at (0,50);
+    \coordinate (E) at (87.5,50);
+    \coordinate (G) at (175,50);
+
+    \coordinate (B) at ($(D)!2!(E)$);
+    \coordinate (C) at ($(F)!2!(G)$);
+    
+    \fill[draw=black, fill=gray!20] (N) -- (E) -- (M) -- (F) -- cycle;
+    \fill[draw=black, fill=gray!20] (N) -- (E) -- (C) -- (B) -- cycle;
+    \fill[draw=black, fill=gray!20] (A) -- (F) -- (M) --  cycle;
+    
+    \draw[line width=0.5mm] (A) -- (B) -- (C) -- cycle;
+
+    \draw (D) -- (M);
+    \draw (G) -- (N);
+    
+    \foreach \point in {A,B,C,D,E,F,G,M,N}
+    \filldraw [black] (\point) circle (20pt);
+    
+    \node[above]  at (A) {$A$};
+    \node[below]       at (B) {$B$};
+    \node[below]  at (C) {$C$};
+    \node[left]       at (D) {$D$};
+    \node[above left]       at (E) {$E$};
+    \node[below]        at (F) {$F$};
+    \node[below left]        at (G) {$G$};
+    \node[right]        at (M) {$M$};
+    \node[left]       at (N) {$N$};
+    
+\end{tikzpicture}

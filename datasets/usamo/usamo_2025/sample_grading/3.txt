@@ -1,0 +1,25 @@
+{
+    "points": 7,
+    "details": [
+        {
+            "title": "Connectivity of construction",
+            "points": 3,
+            "desc": "The given construction is correct and induces a graph that is connected."
+        },
+        {
+            "title": "Finiteness of shortest paths",
+            "points": 1,
+            "desc": "The given construction induces a graph where the shortest path between any two nodes is finite."
+        },
+        {
+            "title": "Showing the graph is planar",
+            "points": 2,
+            "desc": "The given construction is correct and induces a planar graph."
+        },
+        {
+            "title": "Finishing",
+            "points": 1,
+            "desc": "Combines planarity and finite connectivity to show that the construction is a winning strategy for Alice."
+        }
+    ]
+}

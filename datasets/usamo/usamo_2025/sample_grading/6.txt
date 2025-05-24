@@ -1,0 +1,20 @@
+{
+    "points": 7,
+    "scheme": [
+        {
+            "title": "Defining a graph",
+            "points": 1,
+            "desc": "Redefines the problem as a graph matching problem by considering a single person's bubbles."
+        },
+        {
+            "title": "Hall's theorem",
+            "points": 3,
+            "desc": "Applies the converse of Hall's theorem as many times as possible to reach a set that has a perfect matching"
+        },
+        {
+            "title": "Reducing the problem",
+            "points": 3,
+            "desc": "Shows that by applying the matching of the final set you can reduce the problem by 1 person."
+        }
+    ]
+}

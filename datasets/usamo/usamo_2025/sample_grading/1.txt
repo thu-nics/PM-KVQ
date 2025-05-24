@@ -1,0 +1,25 @@
+{
+    "points": 7,
+    "details":[
+        {
+            "title": "Initial closed form expression for each digit",
+            "points": 1,
+            "desc": "Correctly uses the base-2n representation of n^k to find a closed form expression of each digit a_i=\\left\\lfloor \\frac{n^k}{(2n)^i}\\right\\rfloor mod (2n)"
+        },
+        {
+            "title": "Interchanging the floor and mod",
+            "points": 3,
+            "desc": "Transforms the digit expression into a easily boundable one by interchanging the floor and modulo operations."
+        },
+        {
+            "title": "Bounding the expression",
+            "points": 2,
+            "desc": "Correctly bounds the aforementioned expression, usually by showing the numerator is divisible by n, so that $a_i>=\\left\\lfloor \\frac{n}{2^i}\\right\\rfloor$\\|."
+        },
+        {
+            "title": "Finishing",
+            "points": 1,
+            "desc": "Chooses a provably sufficiently large $N$ and has proven that $n^k$ has more than $k$ digits."
+        }
+    ]
+}

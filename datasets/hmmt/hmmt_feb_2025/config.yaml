@@ -1,0 +1,6 @@
+instruction: "Please reason step by step, and put your final answer within \\boxed{{}}."
+default_temperature: 0.6
+default_max_tokens: 16000
+strict_parsing: false
+n_problems: 30
+date: "2025-02-15"

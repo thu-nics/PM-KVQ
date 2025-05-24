@@ -1,0 +1,4 @@
+We claim one such $N$ is $\boxed{N=2^{k-1}(d+1)}$. Begin by letting $a_i$ be the digit at the $i$th position from the right (0-indexed) of $n^k$ in base $2n$; i.e., $a_0$ is the units digit. Obviously, $a_i=0$ for all $i\ge k$, since $n^k<(2n)^k$. We WTS $a_i>d$ for each $i=0,1,\dots,k-1$, and observe the following:
+\[ a_i=\left\lfloor\frac{n^k}{(2n)^i}\right\rfloor\text{ mod }2n=\left\lfloor\frac{n^{k-i}}{2^i}\right\rfloor\text{ mod }2n=\left\lfloor\frac{n^{k-i}\text{ mod }2^{i+1}n}{2^i}\right\rfloor. \]Note that the numerator is a positive multiple of $n$, since 1) $k-i>0\implies n\mid\gcd(n^{k-i},2^{i+1}n)$ and 2)
+($n$ is odd) $2^{i+1}n\nmid n^{k-i}$. Thus,
+\[ a_i=\left\lfloor\frac{n^{k-i}\text{ mod }2^{i+1}n}{2^i}\right\rfloor>d \quad\iff\quad n^{k-i}\text{ mod }2^{i+1}n\ge n\ge2^i(d+1), \]which is true since $n>N=2^{k-1}(d+1)$ and $k-1\ge i$. $\square$

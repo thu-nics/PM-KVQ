@@ -1,0 +1,18 @@
+We claim that the answer is $\boxed{\text{all even integers}}.$
+
+Proof that odd $k$ fail: Just take $n = 2$ and get $2^k + 2$ is divisible by $3,$ which implies $2^k \equiv 1 \pmod{3}$ This can only happen if $k$ is even.
+
+Proof that even $k$ work: Substitute $n-1$ in place for $n$ in the problem; we then must prove that$$\frac{1}{n} \sum_{i=0}^{n-1} \binom{n-1}{i}^k$$is an integer for all positive integers $n.$ Call $n$ $k$-good if $n$ satisfies this condition. Letting $\omega(n)$ denote the number of not necessarily distinct prime factors of $n,$ we will prove that all positive integers $n$ are $k$-good by induction on $\omega(n).$ The base case is trivial since if $\omega(n) = 0,$ then $n = 1,$ which vacuously works.
+
+Now suppose that the result was true for all $n$ such that $\omega(n) \le a.$ Let the prime factorization of $n$ be $p_1^{e_1} \cdot p_2^{e_2} \cdots p_m^{e_m},$ where $p_1, \dots, p_m$ are distinct primes and $e_1, \dots, e_m \in \mathbb{N}$ such that $e_1 + \dots + e_m = a+1.$ We will show that$$\sum_{i=0}^{n-1} \binom{n-1}{i}^k \equiv 0 \pmod{p_l^{e_l}}$$for all $1 \le l \le m,$ which finishes the inductive step by CRT.
+
+We compute
+\begin{align*}
+\binom{n-1}{i} &= \frac{(n-1)!}{i! (n-i-1)!} \\
+&= \frac{(n-1)(n-2)\cdots (n-i)}{i!} \\
+&= \prod_{j=1}^i \frac{n-j}{j},
+\end{align*}so$$\binom{n-1}{i}^k = \prod_{j=1}^i \left(\frac{n-j}{j}\right)^k.$$If $p_l \nmid j,$ then $p_l \nmid n-j$ as well since $p_l \mid n.$ Thus $j$ has a modular inverse modulo $p_l^{e_k},$ so we can say$$\left(\frac{n-j}{j}\right)^k \equiv \left(\frac{-j}{j}\right)^k \equiv (-1)^k \equiv 1 \pmod{p_l^{e_k}}$$because $k$ is even. Hence the terms in this product for which $p_l \nmid j$ contribute nothing to the binomial coefficient.
+
+If $p_l \mid j,$ then we have$$\frac{n-j}{j} = \frac{\frac{n}{p_l} - \frac{j}{p_l}}{\frac{j}{p_l}}.$$Reindexing the product in terms of $\frac{j}{p_l},$ we get$$\binom{n-1}{i}^k \equiv \prod_{j'=1}^{\lfloor i/p_l \rfloor} \left(\frac{n/p_l - j'}{j'}\right)^k \equiv \binom{n/p_l}{\lfloor i/p_l \rfloor}^k \pmod{p_l^{e_l}}.$$Therefore, plugging back into our sum gives$$\sum_{i=0}^{n-1} \binom{n-1}{i}^k \equiv p_l \sum_{i=0}^{n/p_l - 1} \binom{n/p_l - 1}{i}^k \pmod{p_l^{e_l}}.$$By the inductive hypothesis, the sum on the right-hand side is divisible by $p_l^{e_l - 1},$ so the entire sum is divisible by $p_l^{e_l}.$ This completes our inductive step.
+
+Therefore, we have proven that all positive integers $n$ are $k$-good, and we are done.

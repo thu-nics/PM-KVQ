@@ -1,0 +1,16 @@
+Assume FTSOC $P$ has $n$ real roots. WLOG $P$ has leading coefficient $1$ so let $P(x)=:(x-r_1)\cdots(x-r_n)$. WLOG $k=n-1$, as otherwise we can take $Q:=(x-r_1)\cdots(x-r_{k+1})$ and deal with $Q$ instead of $P$.
+
+By the assertion, each $\frac{P(x)}{x-r_i}$ for $1\leq i\leq n$ has a coefficient equal to $0$. Since $r_i\neq 0$ for all $i$, this coefficient is not the leading or constant coefficient, so it has $k-1=n-2$ choices. By pigeonhole, there exists $1\leq i<j\leq n$ such that $Q(x):=\frac{P(x)}{x-r_i}$ and $R(x):=\frac{P(x)}{x-r_j}$ have no $x^\alpha$ term, for some $\alpha\geq 1$. WLOG $i=n-1$ and $j=n$. Hence
+\begin{align*}
+P(x)&=(x-r_1)\cdots(x-r_{n-2})(x-r_n)\\
+Q(x)&=(x-r_1)\cdots(x-r_{n-2})(x-r_{n-1}).
+\end{align*}Then $P(x)-Q(x)=(r_{n-1}-r_n)(x-r_1)\cdots(x-r_{n-2})$ has no $x^\alpha$ term, so $A(x):=(x-r_1)\cdots(x-r_{n-2})$ has no $x^\alpha$ term since $r_{n-1}\neq r_n$. Also, $r_{n-1}P(x)-r_nQ(x)=x(r_{n-1}-r_n)(x-r_1)\cdots(x-r_{n-2})$ has no $x^\alpha$ term so $A(x)$ has no $x^{\alpha-1}$ term.
+
+Claim. $A(x)$ cannot have $n-2$ distinct real roots.
+Proof. Suppose FTSOC $A(x)$ has $n-2$ distinct real roots. We claim that $A^{(m)}(x)$, the $m$th derivative of $A(x)$, has $n-2-m$ distinct real roots for all $m\leq n-2$. We proceed by induction on $m$ with the base case $m=0$ trivial.
+
+Assume $A^{(m)}(x)$ has $n-2-m$ distinct real roots. Between every $2$ consecutive real roots there exists a local extremum, where $A^{(m+1)}(x)$ is $0$. $A^{(m)}(x)$ has $n-2-m-1$ pairs of consecutive real roots so $A^{(m+1)}(x)$ has $n-2-(m+1)$ distinct real roots, completing the induction step.
+
+Thus $A^{(\alpha-1)}$ has no $x^{(\alpha-1)-(\alpha-1)}=x^0$ or $x^{\alpha-(\alpha-1)}=x$ term, so $0$ is a double root of $A^{(\alpha-1)}$. However, all the roots of $A^{(\alpha-1)}$ are distinct and real, a contradiction. $\square$
+
+This is a contradiction since $r_1,\,\ldots,\,r_{n-2}$ are distinct real numbers. Thus $P$ has a nonreal root. $\square$

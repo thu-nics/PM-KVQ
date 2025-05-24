@@ -1,0 +1,26 @@
+{
+    "id": "2",
+    "points": 7,
+    "details":[
+        {
+            "title": "Pigeonhole principle",
+            "points": 1,
+            "desc": "Identifies 2 polynomials which share a coefficient of 0 at the same power of $x$."
+        },
+        {
+            "title": "Adjacent zero coefficients",
+            "points": 2,
+            "desc": "Finds a divisor polynomial that has 2 adjacent zero coefficients."
+        },
+        {
+            "title": "Root distinctness contradiction",
+            "points": 3,
+            "desc": "Shows that a divisor polynomial with adjacent zero coefficients cannot have distinct real roots."
+        },
+        {
+            "title": "Finishing",
+            "points": 1,
+            "desc": "Combines everything into a cohesive and correct solution."
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+[
+    {
+        "id": "1",
+        "points": 7,
+        "scheme": [
+            {
+                "title": "Initial closed form expression for each digit",
+                "points": 1,
+                "desc": "Uses the base-2n representation of $n^k$ to find a closed form expression of each digit $a_i=\\left\\lfloor \\frac{n^k}{(2n)^i}\\right\\rfloor mod\\ (2n)$"
+            },
+            {
+                "title": "Interchanging the floor and mod",
+                "points": 3,
+                "desc": "Transforms the digit expression into a easily boundable one by interchanging the floor and modulo operations."
+            },
+            {
+                "title": "Bounding the expression",
+                "points": 2,
+                "desc": "Correctly bounds the aforementioned expression, usually by showing the numerator is divisible by n, so that $a_i>=\\left\\lfloor \\frac{n}{2^i}\\right\\rfloor$\\|.$"
+            },
+            {
+                "title": "Finishing",
+                "points": 1,
+                "desc": "Chooses a provably sufficiently large $N$. The point is not awarded if it has not proven that n^k has at most k digits."
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "points": 7,
+        "scheme": [
+            {
+                "title": "Pigeonhole principle",
+                "points": 1,
+                "desc": "Identifies 2 polynomials which share a coefficient of 0 at the same power of $x$."
+            },
+            {
+                "title": "Adjacent zero coefficients",
+                "points": 2,
+                "desc": "Finds a divisor polynomial that has 2 adjacent zero coefficients."
+            },
+            {
+                "title": "Root distinctness contradiction",
+                "points": 3,
+                "desc": "Shows that a divisor polynomial with adjacent zero coefficients cannot have distinct real roots."
+            },
+            {
+                "title": "Finishing",
+                "points": 1,
+                "desc": "Combines everything into a cohesive and correct solution (all the separate concepts, or the entire solutions must be correct)."
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "points": 7,
+        "scheme": [
+            {
+                "title": "Connectivity of construction",
+                "points": 3,
+                "desc": "The given construction is correct and induces a graph that is connected."
+            },
+            {
+                "title": "Finiteness of shortest paths",
+                "points": 1,
+                "desc": "The given construction induces a graph where the shortest path between any two nodes is finite."
+            },
+            {
+                "title": "Showing the graph is planar",
+                "points": 2,
+                "desc": "The given construction is correct and induces a planar graph."
+            },
+            {
+                "title": "Finishing",
+                "points": 1,
+                "desc": "Combining planarity and finite connectivity to show that the construction is a winning strategy for Alice."
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "points": 7,
+        "scheme": [
+            {
+                "title": "Additional construction",
+                "points": 1,
+                "desc": "Constructs useful points. Is only granted if the given construction gives you useful properties that can be used to reach the solution."
+            },
+            {
+                "title": "Properties of the construction",
+                "points": 4,
+                "desc": "Proves useful properties of the construction that involves some symmetry along the $(AFP)$ circle. Points are granted based on the progress made."
+            },
+            {
+                "title": "Finishing",
+                "points": 2,
+                "desc": "Shows that $CX=CY$ by utilising the aforementioned properties"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "points": 7,
+        "scheme": [
+            {                                                                                                                        
+                "title": "Reduction to powers of prime divisors of n+1",
+                "points": 1,
+                "desc": "Uses Chinese Remainder Theorem to reduce the problem to a system of equations modulo $p_l^{e_l}$."
+            },
+            {
+                "title": "Remainder of $\\frac{n-j}{j} when p_l does not divide j",
+                "points": 3,
+                "desc": "Represents the term $n \\choose i$ as a product of fractions $\\frac{n-j}{j}$ and finds the remainder of the terms $\\frac{n-l}{l}^k$ where $p_l$ does not divide $j$."
+            },
+            {   
+                "title": "Remainder of $\\frac{n-j}{j} when $p_l$ divides $j$",
+                "points": 3,
+                "desc": "Represents the term $n \\choose i$ as a product of fractions $\\frac{n-j}{j}$ and finds the remainder of the terms $\\frac{n-l}{l}^k$ where $p_l$ divides $j$."
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "points": 7,
+        "scheme": [
+            {
+                "title": "Defining a graph",
+                "points": 1,
+                "desc": "Redefine the problem as a graph matching problem using a viable reformulation."
+            },
+            {
+                "title": "Hall's theorem",
+                "points": 3,
+                "desc": "Apply the converse of Hall's theorem as many times as possible until you reach a set that has a perfect matching"
+            },
+            {
+                "title": "Reducing the problem",
+                "points": 3,
+                "desc": "Show that by applying the matching of the final set you can reduce the problem by 1 person."
+            }
+        ]
+    }
+]

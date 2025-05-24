@@ -1,0 +1,35 @@
+Suppose $\triangle ABC$ has angles $\angle BAC = 84^\circ$, $\angle ABC = 60^\circ$, and $\angle ACB = 36^\circ$. Let $D$, $E$, and $F$ be the midpoints of sides $\overline{BC}$, $\overline{AC}$, and $\overline{AB}$, respectively. The circumcircle of $\triangle DEF$ intersects $\overline{BD}$, $\overline{AE}$, and $\overline{AF}$ at points $G$, $H$, and $J$, respectively. The points $G$, $D$, $E$, $H$, $J$, and $F$ divide the circumcircle of $\triangle DEF$ into six minor arcs, as shown. Find $\wideparen{DE} + 2 \cdot \wideparen{HJ} + 3 \cdot \wideparen{FG}$, where the arcs are measured in degrees.
+
+\begin{tikzpicture}[scale=1.2]
+    \coordinate (B) at (0,0);
+    \coordinate (C) at (6,0);
+    \coordinate (A) at (1.78,3.07);
+    
+    \coordinate (D) at ($(B)!0.5!(C)$);
+    \coordinate (E) at ($(A)!0.5!(C)$);
+    \coordinate (F) at ($(A)!0.5!(B)$);
+    
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    \fill (A) circle (2pt) node[above] {$A$};
+    \fill (B) circle (2pt) node[below] {$B$};
+    \fill (C) circle (2pt) node[below] {$C$};
+
+    \fill (D) circle (2pt) node[below] {$D$};
+    \fill (E) circle (2pt) node[right] {$E$};
+    \fill (F) circle (2pt) node[left] {$F$};
+
+    \draw (D) -- (E) -- (F) -- cycle;
+
+    \coordinate (O) at (2.39,1.38);
+    
+    \draw (O) circle (1.51);
+
+    \coordinate (G) at (1.72, 0.03);
+    \coordinate (J) at (1.5, 2.6);
+    \coordinate (H) at (2.08, 2.85);
+
+    \fill (G) circle (2pt) node[below] {$G$};
+    \fill (H) circle (2pt) node[above] {$H$};
+    \fill (J) circle (2pt) node[above left] {$J$};
+\end{tikzpicture}

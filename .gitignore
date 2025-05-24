@@ -1,0 +1,11 @@
+.vscode/
+__pycache__/
+*.egg-info/
+
+outputs/
+data/
+bash/
+test/
+log/
+cmd/
+tmp/
